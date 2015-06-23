@@ -1,0 +1,25 @@
+#!/bin/sh
+
+# To turn the screen on
+# ("xset dpms force on" doesn't work with HDMI display... tvservice should be used instead)
+#
+# POWER MANAGEMENT SHOULD BE DISABLED IN /etc/xdg/lxsession/LXDE/autostart:
+#  @xset s off
+#  @xset -dpms
+# (power management can be reset manually from ssh with "DISPLAY=:0 xset s reset")
+# Additionally, you should remove the xscreensaver line.
+#
+# xrefresh (refresh all or part of an X screen) can be found in the "x11-xserver-utils" Debian package
+
+# See:
+# - http://www.triggeredmessaging.com/blog/server-monitoring-with-a-raspberry-pi-and-graphite
+# - http://www.raspberrypi.org/phpBB3/viewtopic.php?f=64&t=7570
+
+
+tvservice --preferred > /dev/null
+
+fbset -depth 8
+fbset -depth 16
+
+export DISPLAY=:0
+xrefresh

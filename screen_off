@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# To turn the screen off
+# ("xset dpms force off" doesn't work with HDMI display... tvservice should be used instead)
+
+# See:
+# - http://www.triggeredmessaging.com/blog/server-monitoring-with-a-raspberry-pi-and-graphite
+# - http://www.raspberrypi.org/phpBB3/viewtopic.php?f=64&t=7570
+
+tvservice --off > /dev/null
