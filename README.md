@@ -4,7 +4,10 @@ Copyright (c) 2013 Jeremie DECOCK (http://www.jdhp.org)
 
 ## Description
 
-TODO...
+Turn RaspberryPi's screen ON and OFF (on HDMI output).
+
+These scripts can be used with `cron` (the Unix job scheduler) to switch ON or
+OFF the screen at a specific time (to make a clock alarm for instance).
 
 ## Dependencies
 
