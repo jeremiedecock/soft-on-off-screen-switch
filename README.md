@@ -11,7 +11,9 @@ OFF the screen at a specific time (to make a clock alarm for instance).
 
 ## Dependencies
 
-x11-xserver-utils
+On Debian systems:
+
+* x11-xserver-utils
 
 ## License
 
